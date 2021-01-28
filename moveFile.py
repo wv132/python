@@ -10,8 +10,8 @@ This program will move content from one folder to another folder.
 """
 print(startText)
 
-sourcePath = input("Enter - the sourcePath: ")#r"C:\Users\WV\Desktop\testingPython\new folder"
-targetPath = input("Enter - the targetPath: ")#r"C:\Users\WV\Desktop\testingPython\new"
+sourcePath = input("Enter - the sourcePath: ")
+targetPath = input("Enter - the targetPath: ")
 
 pathSeparator = "\\"
 
