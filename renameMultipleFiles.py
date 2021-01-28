@@ -10,7 +10,7 @@ def main():
     Once you entered the right path the program will collect all the files in that path, reverse the filename and rename it."""
     print(StartText)
 
-    #Ask for the filepath input from the user and change directory tio the given file path
+    #Ask for the filepath input from the user and change directory to the given file path
     os.chdir(input("what is the path of the files you want to rename: "))
     
     #Loop over every file in the directory
@@ -27,8 +27,6 @@ def main():
         print('{} --> {}'.format(file,my_dest))
 
 
-
-# Driver Code
 if __name__ == '__main__':
    # Calling main() function
    main()

@@ -1,30 +1,35 @@
 import os
 import shutil
 
-startText = """
-This program will move content from one folder to another folder.
--   Enter a sourcepath. This is the path where all the content are that you want to move.
--   Enter a targetpath. This is the path that you want your content to move to.
-        NOTE - if you enter a targetpathname that doesnt exist, the program will create that path for you.
 
-"""
-print(startText)
+def main():
+    startText = """
+    This program will move content from one folder to another folder.
+    -   Enter a sourcepath. This is the path where all the content are that you want to move.
+    -   Enter a targetpath. This is the path that you want your content to move to.
+            NOTE - if you enter a targetpathname that doesnt exist, the program will create that path for you.
 
-sourcePath = input("Enter - the sourcePath: ")
-targetPath = input("Enter - the targetPath: ")
+    """
+    print(startText)
 
-pathSeparator = "\\"
+    sourcePath = input("Enter - the sourcePath: ")
+    targetPath = input("Enter - the targetPath: ")
 
-os.chdir(sourcePath)
-count = 0
+    pathSeparator = "\\"
 
-for file in os.listdir():
-       
-    f_sourcePath = sourcePath+pathSeparator+file
-    f_targetPath = targetPath+pathSeparator+file
-    shutil.move(f_sourcePath,f_targetPath)
-    print("Moving file succesfull. "+file)
-    count += 1
+    os.chdir(sourcePath)
+    count = 0
 
-print("total files moved: "+str(count))
+    for file in os.listdir():
+        
+        f_sourcePath = sourcePath+pathSeparator+file
+        f_targetPath = targetPath+pathSeparator+file
+        shutil.move(f_sourcePath,f_targetPath)
+        print("Moving file succesfull. "+file)
+        count += 1
 
+    print("total files moved: "+str(count))
+
+if __name__ == '__main__':
+   # Calling main() function
+   main()
